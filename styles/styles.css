@@ -89,7 +89,7 @@ main .container{
 /* card data */
 .dataShow{ 
     /* Animation used when data is showed */
-    animation:   myAnimFadeIn 1s ease-in-out 1s 1 normal forwards !important;
+    animation:   myAnimFadeIn 1s ease 0s 1 normal forwards !important;
   }
 .card.c-data{
     background-repeat: no-repeat;
