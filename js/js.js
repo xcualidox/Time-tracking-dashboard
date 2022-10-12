@@ -21,11 +21,7 @@ function showData(...args){
         // Used to wait animation effect of .dataShow then remove the latter
         element.offsetWidth 
        })
-   cards.forEach((element)=>{
-    // add .dataShow in order to get an animation effect when data changes
-    element.classList.add("dataShow")
-    
-   })
+   
 //    Fetching cards data from data.json file
     fetch("../data/data.json")
     .then((data)=>data.json())
@@ -37,12 +33,15 @@ function showData(...args){
         })
 
     })
+    cards.forEach((element)=>{
+    // add .dataShow in order to get an animation effect when data changes
+    element.classList.add("dataShow")
+    
+   })
    
 }
 
-    // document.querySelector(".default").addEventListener("DOMContentLoaded",()=>{
-    //     alert(55)
-    // })
+   
 // Call show data function in order to put default data when page changes or reload 
 showData(1)
 // Adding click event with showData function to all .time-range a tags
