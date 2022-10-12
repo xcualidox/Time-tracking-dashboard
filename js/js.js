@@ -1,5 +1,5 @@
 // Function used to show data in cards
-async function showData(...args){
+function showData(...args){
     // Selector is used to decide what element to target 
     let selector= (args[0]==1)? document.querySelector(".default"): this;
     // If the selector already have a active status then go out the function
@@ -29,7 +29,7 @@ async function showData(...args){
 //    Fetching cards data from data.json file
     fetch("../data/data.json")
     .then((data)=>data.json())
-    .then( await function(result){
+    .then((result)=>{
         result.forEach((element,index)=>{
             currentHours[index].innerHTML = element.timeframes[range].current;
             previousHours[index].innerHTML = element.timeframes[range].previous;
